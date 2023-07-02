@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML Canvas</title>
+    </head>
+    <body>
+        <canvas id="mycanvas" height="400" width="400" style="border: 1px dashed black;"></canvas>
+
+        <script>
+            var content = document.getElementById('mycanvas');
+            var cxt = content.getContext('2d');
+
+            var x = content.width/2;
+            var y = content.height/2;
+            var rad = 75;
+            var startangle =0.0*Math.PI;
+            var endangle = 2.0*Math.PI;
+            var counterclockwise = false;
+
+
+            cxt.beginPath();
+            cxt.arc(x,y,rad,startangle,endangle,counterclockwise);
+            cxt.closePath();
+            cxt.lineWidth= '10';
+            cxt.fillStyle = 'red';
+            cxt.fill();
+        </script>
+    </body>
+</html>

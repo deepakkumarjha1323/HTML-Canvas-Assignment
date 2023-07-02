@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTNL Canvas Projects</title>
+    </head>
+    <body>
+        
+        <canvas id="mycanvas" width="500" height="500" style="border: 2px solid red;"></canvas>
+
+        <script>
+            var content = document.getElementById('mycanvas');
+            var cxt = content.getContext('2d');
+            cxt.beginPath();
+            cxt.moveTo(20,20);
+            cxt.lineTo(300,20);
+            cxt.lineTo(300,240);
+            cxt.lineTo(20,240);
+            cxt.lineTo(20,20);
+            cxt.fillStyle='Yellow';
+            cxt.fill();
+            cxt.strokeStyle="blue";
+            cxt.stroke();
+            cxt.closePath();
+
+            cxt.beginPath();
+            cxt.moveTo(20,20);
+            cxt.lineTo(160,120);
+            cxt.lineTo(300,20);
+            cxt.fillStyle="red";
+            cxt.fill();
+            cxt.closePath();
+
+            cxt.beginPath();
+            cxt.moveTo(20,20);
+            cxt.lineTo(300,239);
+            cxt.lineTo(300,20);
+            cxt.fillStyle="red";
+            cxt.fill();
+            cxt.closePath();
+
+
+            console.log(cxt);
+
+        </script>
+    </body>
+</html>
